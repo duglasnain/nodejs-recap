@@ -42,6 +42,9 @@ html,body{
    box-sizing: border-box;
    border-radius: 4px;
 }
+.box > input:focus{
+   background-color: rgb(255, 255, 255);
+}
 #login-button{
    background-color: rgb(40, 84, 48);
    color: aliceblue;
@@ -77,8 +80,4 @@ html,body{
 #container-inputs > input.disabled{
    background-color: rgb(177, 177, 177);
    pointer-events: none;
-}
-#username,#password > input:focus{
-   border: none;
-   background-color: rgb(164, 190, 123);
 }
