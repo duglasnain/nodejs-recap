@@ -78,3 +78,7 @@ html,body{
    background-color: rgb(177, 177, 177);
    pointer-events: none;
 }
+#username,#password > input:focus{
+   border: none;
+   background-color: rgb(164, 190, 123);
+}
