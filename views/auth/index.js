@@ -7,6 +7,8 @@ if(window.localStorage.getItem('client') !== null){
    loginButton.innerHTML = 'LOG OUT';
    username.classList.add("disabled"); username.value = client.username;
    password.classList.add("disabled"); password.value = client.password;
+   document.querySelector('#show-password-checkbox').disabled = true;
+   document.querySelector('#remember-me-checkbox').disabled = true;
 }
 
 function wrongInput(obj){
@@ -39,7 +41,21 @@ function login(){
       document.querySelector('#login-button').innerHTML = 'LOG OUT';
       document.querySelector('#username').classList.add('disabled');
       document.querySelector('#password').classList.add('disabled');
-   }   
+      document.querySelector('#show-password-checkbox').disabled = true;
+      document.querySelector('#remember-me-checkbox').disabled = true;
+   }
+
+   fetch('http://localhost:3000/api/users')
+      .then(res=>res.json())
+      .then(data=>{
+         data.forEach(user => {
+            if(username.value == user.username && password.value == user.password)
+               console.log('logged in')
+            else console.error('invalid data')
+         });
+      })
+      .catch(err=>console.error(err));
+   
 }
 
 function logout(){
@@ -50,6 +66,8 @@ function logout(){
    document.querySelector('#login-button').innerHTML = 'LOG IN';
    username.classList.remove('disabled');
    password.classList.remove('disabled');
+   document.querySelector('#show-password-checkbox').disabled = false;
+   document.querySelector('#remember-me-checkbox').disabled = false;
 }
 
 function showPass(){
@@ -59,4 +77,34 @@ function showPass(){
          container.type = 'text';
       else container.type = 'password';
    }else alert("not found");
+}
+
+function register(){
+   const username = document.querySelector('#username');
+   const password = document.querySelector('#password');
+   if(username.value === "" && password.value === ""){
+      wrongInput(username); wrongInput(password);
+   }
+   else if(username.value === "") wrongInput(username);
+   else if(password.value === "") wrongInput(password);
+   else{
+      fetch(
+         'http://localhost:3000/register/reg',
+         {
+            method:"POST",
+            headers:{
+               "Content-Type": "application/json"
+            },
+            body:JSON.stringify({
+               "username": `${username.value}`,
+               "password": `${password.value}`
+            })
+         })
+         .then((res)=>{
+            console.log(res)
+            alert(`${username.value} registered!`);
+            // window.location = 'http://localhost:3000/login';
+         }).catch(err=>console.log(err))
+      
+   }
 }

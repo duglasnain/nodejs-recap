@@ -1,3 +1,34 @@
 [
-   {"username":"niger", "password":"niger1"}
+   {
+      "username": "niger1",
+      "password": "niger123"
+   },
+   {
+      "username": "niger123",
+      "password": "niger123"
+   },
+   {
+      "username": "asdasdasdasd",
+      "password": "asdasdasdasd"
+   },
+   {
+      "username": "asdasdasdasdasd",
+      "password": "asdasdasdasdasd"
+   },
+   {
+      "username": "asdasdasdasdasdasd",
+      "password": "asdasdasdasdasdasd"
+   },
+   {
+      "username": "asd",
+      "password": "asd"
+   },
+   {
+      "username": "newUser213",
+      "password": "newUser213"
+   },
+   {
+      "username": "nigeegsgd",
+      "password": "nigeegsgd"
+   }
 ]

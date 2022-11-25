@@ -42,11 +42,11 @@ html,body{
    box-sizing: border-box;
    border-radius: 4px;
 }
-.box > input:focus{
-   background-color: rgb(255, 255, 255);
+.box:focus{
+   background-color: rgb(182, 204, 146);
 }
 #login-button{
-   background-color: rgb(40, 84, 48);
+   background-color: #285430;
    color: aliceblue;
    border: none;
    border-radius: 2px;
@@ -56,18 +56,18 @@ html,body{
    padding: 1vw;
 }
 .text{
-   padding-top: 20px;
    font-family:'arial';
    font-size: 1vw;
    font-weight: 600;
    color: rgb(164, 190, 123);
-   padding-bottom: 1.2vw;
+   padding-bottom: 1vw;
+   min-width: 20px;
 }
 #checkboxes{
    display: flex;
    justify-content: space-between;
 }
-
+/* 
 .text::placeholder{
    padding-top: 20px;
    font-family:'arial';
@@ -75,7 +75,7 @@ html,body{
    font-weight: 600;
    color: rgb(198, 137, 198);
    padding-bottom: 1.2vw;
-}
+} */
 
 #container-inputs > input.disabled{
    background-color: rgb(177, 177, 177);

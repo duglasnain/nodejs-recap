@@ -6,25 +6,21 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Document</title>
    <link rel="stylesheet" href="style.css"></link>
-   <script src="index.js" defer></script>
+   <script src="./index.js" defer></script>
 </head>
 <body>
    <div id="container">
       <div id="container-inputs">
-         <div id="maintext"> ACCOUNT LOGIN </div>
+         <div id="maintext"> REGISTER </div>
          <input class="box" id="username" placeholder="Username">
          <input class="box" type="password" id="password" placeholder="Password">
          <div id="checkboxes">
             <div class="text">
-               <input type="checkbox" name='Show password' onclick="showPass()">
+               <input id="show-password-checkbox" type="checkbox" name='Show password' onclick="showPass()">
                <label for="Show password">Show password</label>
             </div>
-            <div class="text">
-               <input id="remember-me-checkbox" type="checkbox" name='Remember me'>
-               <label for="Remember me">Remember me</label>
-            </div>
          </div>
-         <button id="login-button" onclick="login()">LOG IN</button>
+         <button id="login-button" onclick="register()">REGISTER</button>
       </div>
    </div>
 </body>
