@@ -34,17 +34,54 @@ html,body{
 }
 .box{
    width: 100%;
-   padding: 10px 1px;
    border: none;
    margin-bottom: 1vw;
    background-color: rgb(164, 190, 123);
-   padding: 10px;
+   /* padding: 10px; */
    box-sizing: border-box;
    border-radius: 4px;
+   display: flex;
+   align-items: stretch;
 }
-.box > input:focus{
+
+#password{
+   width: 4vw;
+   padding-left: 10px;
+   padding-bottom: 10px;
+   padding-top: 10px;
+   background-color: inherit;
+   border: inherit;
+   box-sizing: inherit;
+   border-radius: inherit;
+}
+#username{
+   width: 100%;
+   padding: 10px;
+   background-color: inherit;
+   box-sizing: border-box;
+   border-radius: inherit;
+   border: inherit;
+}
+.show-pass{
+   width: .1vw;
+   margin: 0px;
+   height: 100%;
+   border: none;
+   border-radius: inherit;
+   background-color: inherit;
+   
+}
+.show-pass:hover{
+   background-color: rgb(142, 167, 102);
+   cursor: pointer;
+}
+
+.box input:focus{
    background-color: rgb(255, 255, 255);
+   outline: none;
 }
+
+
 #login-button{
    background-color: rgb(40, 84, 48);
    color: aliceblue;
