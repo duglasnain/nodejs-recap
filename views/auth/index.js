@@ -103,7 +103,7 @@ function register(){
          .then((res)=>{
             console.log(res)
             alert(`${username.value} registered!`);
-            // window.location = 'http://localhost:3000/login';
+            window.location = 'http://localhost:3000/login';
          }).catch(err=>console.log(err))
       
    }
