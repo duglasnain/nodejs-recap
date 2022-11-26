@@ -62,7 +62,7 @@ html,body{
    border-radius: inherit;
    border: inherit;
 }
-.show-pass{
+#show-password-checkbox{
    width: .1vw;
    margin: 0px;
    height: 100%;
@@ -71,7 +71,7 @@ html,body{
    background-color: inherit;
    
 }
-.show-pass:hover{
+#show-password-checkbox:hover{
    background-color: rgb(142, 167, 102);
    cursor: pointer;
 }
@@ -80,7 +80,6 @@ html,body{
    background-color: rgb(255, 255, 255);
    outline: none;
 }
-
 
 #login-button{
    background-color: rgb(40, 84, 48);
