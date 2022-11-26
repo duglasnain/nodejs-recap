@@ -43,11 +43,9 @@ html,body{
    display: flex;
    align-items: stretch;
 }
-<<<<<<< HEAD:views/auth/style.css
 .box:focus{
    background-color: rgb(182, 204, 146);
-=======
-
+}
 #password{
    width: 4vw;
    padding-left: 10px;
@@ -83,7 +81,6 @@ html,body{
 .box input:focus{
    background-color: rgb(255, 255, 255);
    outline: none;
->>>>>>> fa09db70ee9e09eed885de6fa57407e85980ceb8:views/style.css
 }
 
 
