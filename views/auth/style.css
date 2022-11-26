@@ -43,9 +43,7 @@ html,body{
    display: flex;
    align-items: stretch;
 }
-.box:focus{
-   background-color: rgb(182, 204, 146);
-}
+
 #password{
    width: 4vw;
    padding-left: 10px;
@@ -85,7 +83,7 @@ html,body{
 
 
 #login-button{
-   background-color: #285430;
+   background-color: rgb(40, 84, 48);
    color: aliceblue;
    border: none;
    border-radius: 2px;
@@ -95,18 +93,18 @@ html,body{
    padding: 1vw;
 }
 .text{
+   padding-top: 20px;
    font-family:'arial';
    font-size: 1vw;
    font-weight: 600;
    color: rgb(164, 190, 123);
-   padding-bottom: 1vw;
-   min-width: 20px;
+   padding-bottom: 1.2vw;
 }
 #checkboxes{
    display: flex;
    justify-content: space-between;
 }
-/* 
+
 .text::placeholder{
    padding-top: 20px;
    font-family:'arial';
@@ -114,9 +112,9 @@ html,body{
    font-weight: 600;
    color: rgb(198, 137, 198);
    padding-bottom: 1.2vw;
-} */
+}
 
-#container-inputs > input.disabled{
+#container-inputs input.disabled{
    background-color: rgb(177, 177, 177);
    pointer-events: none;
 }
