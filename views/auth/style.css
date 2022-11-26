@@ -34,17 +34,59 @@ html,body{
 }
 .box{
    width: 100%;
-   padding: 10px 1px;
    border: none;
    margin-bottom: 1vw;
    background-color: rgb(164, 190, 123);
-   padding: 10px;
+   /* padding: 10px; */
    box-sizing: border-box;
    border-radius: 4px;
+   display: flex;
+   align-items: stretch;
 }
+<<<<<<< HEAD:views/auth/style.css
 .box:focus{
    background-color: rgb(182, 204, 146);
+=======
+
+#password{
+   width: 4vw;
+   padding-left: 10px;
+   padding-bottom: 10px;
+   padding-top: 10px;
+   background-color: inherit;
+   border: inherit;
+   box-sizing: inherit;
+   border-radius: inherit;
 }
+#username{
+   width: 100%;
+   padding: 10px;
+   background-color: inherit;
+   box-sizing: border-box;
+   border-radius: inherit;
+   border: inherit;
+}
+.show-pass{
+   width: .1vw;
+   margin: 0px;
+   height: 100%;
+   border: none;
+   border-radius: inherit;
+   background-color: inherit;
+   
+}
+.show-pass:hover{
+   background-color: rgb(142, 167, 102);
+   cursor: pointer;
+}
+
+.box input:focus{
+   background-color: rgb(255, 255, 255);
+   outline: none;
+>>>>>>> fa09db70ee9e09eed885de6fa57407e85980ceb8:views/style.css
+}
+
+
 #login-button{
    background-color: #285430;
    color: aliceblue;
