@@ -62,16 +62,20 @@ html,body{
    border-radius: inherit;
    border: inherit;
 }
-.show-pass{
-   width: .1vw;
-   margin: 0px;
+#show-password-checkbox{
+   /* width: .1vw; */
    height: 100%;
    border: none;
    border-radius: inherit;
    background-color: inherit;
-   
+   font-family:'arial';
+   font-size: 1vw;
+   font-weight: 700;
+   text-align: center;
+   color: rgb(40, 84, 48);
+
 }
-.show-pass:hover{
+#show-password-checkbox:hover{
    background-color: rgb(142, 167, 102);
    cursor: pointer;
 }
@@ -80,7 +84,6 @@ html,body{
    background-color: rgb(255, 255, 255);
    outline: none;
 }
-
 
 #login-button{
    background-color: rgb(40, 84, 48);
@@ -93,7 +96,7 @@ html,body{
    padding: 1vw;
 }
 .text{
-   padding-top: 20px;
+   /* padding-top: 20px; */
    font-family:'arial';
    font-size: 1vw;
    font-weight: 600;
@@ -114,7 +117,7 @@ html,body{
    padding-bottom: 1.2vw;
 }
 
-#container-inputs input.disabled, {
+#container-inputs input.disabled{
    background-color: rgb(177, 177, 177);
    pointer-events: none;
 }
