@@ -48,11 +48,14 @@ function login(){
    fetch('http://localhost:3000/api/users')
       .then(res=>res.json())
       .then(data=>{
+         let exists = 0;
          data.forEach(user => {
             if(username.value == user.username && password.value == user.password)
-               console.log('logged in')
-            else console.error('invalid data')
+               exists = 1;
          });
+         if(exists) console.log('logged in')
+            else console.error('invalid data')
+         window.location = 'http://localhost:3000/login';
       })
       .catch(err=>console.error(err));
    
