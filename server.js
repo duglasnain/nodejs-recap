@@ -2,10 +2,10 @@ const express = require('express');
 const app = express();
 const path = require('path');
 
-app.use(express.static(`${__dirname}/views`))
+app.use(express.static(`${__dirname}/views/auth`))
 
 app.route('/').get((req,res)=>{
-   res.sendFile(path.join(`${__dirname}/views/index.html`));
+   res.sendFile(path.join(`${__dirname}/views/auth/index.html`));
 })
 
 app.listen(3001, ()=>console.log('started on 3001'));

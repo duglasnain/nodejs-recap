@@ -114,7 +114,7 @@ html,body{
    padding-bottom: 1.2vw;
 }
 
-#container-inputs > input.disabled{
+#container-inputs input.disabled, {
    background-color: rgb(177, 177, 177);
    pointer-events: none;
 }
