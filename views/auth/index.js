@@ -53,9 +53,12 @@ function login(){
             if(username.value == user.username && password.value == user.password)
                exists = 1;
          });
-         if(exists) console.log('logged in')
+         if(exists){
+            console.log('logged in');
+            window.location = 'http://localhost:3000/login';
+         }
             else console.error('invalid data')
-         window.location = 'http://localhost:3000/login';
+         
       })
       .catch(err=>console.error(err));
    
@@ -92,7 +95,7 @@ function register(){
    else if(password.value === "") wrongInput(password);
    else{
       fetch(
-         'http://localhost:3000/register/reg',
+         'http://localhost:3000/api/users/reg',
          {
             method:"POST",
             headers:{

@@ -1,5 +1,5 @@
-const db = require('../data/db')
-const userSchema = new db.Schema({
+const mongoose = require('mongoose')
+const userSchema = new mongoose.Schema({
    username: {
       type: String,
       required: true,
@@ -18,9 +18,5 @@ const userSchema = new db.Schema({
       default: Date.now(),
    }
 })
-
-userSchema.methods.getUsername = () => {
-   return this.username;
-}
 
 module.exports = mongoose.model('User', userSchema);
