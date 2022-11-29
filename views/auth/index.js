@@ -114,3 +114,11 @@ function register(){
       
    }
 }
+
+function redirectToReg(){
+   window.location = 'http://localhost:3000/register'
+}
+
+function redirectToLogin(){
+   window.location = 'http://localhost:3000/login'
+}

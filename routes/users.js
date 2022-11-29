@@ -1,6 +1,9 @@
 const express = require('express');
 let router = express.Router();
 const db = require('../data/db.js')
+
+const process = require('process');
+
 router.use(express.json())
 router.route('/')
    .get(async (req, res)=>{
@@ -14,15 +17,15 @@ router.route('/')
 router.route('/reg')
    .post(async(req, res)=>{
       const existingUser = await db.findUser(`${req.body.username}`)
-      
-      if(existingUser){
+      console.log(existingUser)
+      if(existingUser === []){
          console.log('existing username')
          res.send(new Error('Existing username')); return;
       }else{
          try {
             await db.createUser(req.body.username, req.body.password)
          } catch (error) {
-            res.send(new Error('Error while creating new user')); return;
+            res.send('Error while creating new user'); return;
          }
       }
    })

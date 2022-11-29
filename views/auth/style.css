@@ -95,6 +95,21 @@ html,body{
    font-weight: 700;
    padding: 1vw;
 }
+
+#redirect-button{
+   background-color: rgb(40, 84, 48);
+   color: aliceblue;
+   border: none;
+   border-radius: 2px;
+   font-family:'arial';
+   font-size: .8vw;
+   font-weight: 700;
+   width: 6vw;
+   height: 3vh;
+   float: right;
+   margin-top: 1vh;
+}
+
 .text{
    /* padding-top: 20px; */
    font-family:'arial';

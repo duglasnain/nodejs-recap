@@ -12,9 +12,11 @@ module.exports = {
    createUser: async function (username, password){
       try{
          const user = await User.create({username: username, password: password})
+         return ''
       }catch(err){
-         console.log(err);
+         return err.message;
       }
+      
       
    },
    findUser: async function (username){
@@ -22,21 +24,21 @@ module.exports = {
          const user = await User.find({username: username})
          return user;
       }catch(err){
-         console.log(err)
+         return err.message;
       }
    },
    deleteUser: async function (username){
       try {
          await User.deleteMany({username: username})
       } catch (error) {
-         console.log(error)
+         return error.message;
       }
    },
    toJson: function(){
       try {
          return User.find({})
       } catch (error) {
-         console.log(error);
+         return error.message;
       }
    }
 }

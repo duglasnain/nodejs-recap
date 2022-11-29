@@ -10,10 +10,16 @@ const users = require('./routes/users')
 app.use('/api/users', users)
 
 //mid
-
 app.use(express.static(`${__dirname}`))
 app.use(express.static(`${__dirname}/views/auth`))
 app.use(express.json())
+
+
+
+app.route('/')
+   .get((req, res)=>{
+      res.redirect('/register')
+   })
 
 app.route('/login')
    .get((req, res)=>{
@@ -24,26 +30,6 @@ app.route('/register')
    .get((req, res)=>{
       res.sendFile(`${__dirname}/views/auth/register.html`);
    })
-
-   ////registry for users.json
-// app.route('/register/reg')
-//    .post((req, res)=>{
-//       const data = require('./users.json')
-//       let exists = 0
-//       for(let i = 0; i < data.length; i++){
-//          if(req.body.username === data[i].username)
-//             exists = 1;
-//       }
-//       if(!exists){
-//          data.push(req.body);
-//       }else{
-//          res.send(new Error('Existing username')); return
-//       }
-//       fs.writeFile(`${__dirname}/users.json`, JSON.stringify(data, null, 3), (err) => {
-//          res.send(err)
-//       })
-//    })
-
 
 app.listen(3000, ()=>console.log('started on 3000'));
 
