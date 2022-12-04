@@ -17,15 +17,16 @@ router.route('/')
 router.route('/reg')
    .post(async(req, res)=>{
       const existingUser = await db.findUser(`${req.body.username}`)
-      console.log(existingUser)
       if(existingUser === []){
          console.log('existing username')
          res.send(new Error('Existing username')); return;
       }else{
          try {
-            await db.createUser(req.body.username, req.body.password)
+            const user = await db.createUser(req.body.username, req.body.password)
+            console.log('[log users.js] user created: ', user)
+            res.send(user)
          } catch (error) {
-            res.send('Error while creating new user'); return;
+            res.send(new Error('Can`t create')); return;
          }
       }
    })

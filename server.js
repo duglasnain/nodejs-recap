@@ -8,10 +8,13 @@ db.connect_mongoose()
 //routes
 const users = require('./routes/users')
 app.use('/api/users', users)
+const cats = require('./routes/cats')
+app.use('/api/cats', cats)
 
 //mid
-app.use(express.static(`${__dirname}`))
 app.use(express.static(`${__dirname}/views/auth`))
+app.use(express.static(`${__dirname}/views/home`))
+
 app.use(express.json())
 
 
@@ -29,6 +32,11 @@ app.route('/login')
 app.route('/register')
    .get((req, res)=>{
       res.sendFile(`${__dirname}/views/auth/register.html`);
+   })
+
+app.route('/home')
+   .get((req, res)=>{
+      res.sendFile(`${__dirname}/views/home/home.html`);
    })
 
 app.listen(3000, ()=>console.log('started on 3000'));

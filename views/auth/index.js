@@ -37,12 +37,12 @@ function login(){
          window.localStorage.setItem('client', `{"username": "${username.value}", "password": "${password.value}"}`)
       }
       
-      document.querySelector('#login-button').onclick=()=>logout();
-      document.querySelector('#login-button').innerHTML = 'LOG OUT';
-      document.querySelector('#username').classList.add('disabled');
-      document.querySelector('#password').classList.add('disabled');
-      document.querySelector('#show-password-checkbox').disabled = true;
-      document.querySelector('#remember-me-checkbox').disabled = true;
+      // document.querySelector('#login-button').onclick=()=>logout();
+      // document.querySelector('#login-button').innerHTML = 'LOG OUT';
+      // document.querySelector('#username').classList.add('disabled');
+      // document.querySelector('#password').classList.add('disabled');
+      // document.querySelector('#show-password-checkbox').disabled = true;
+      // document.querySelector('#remember-me-checkbox').disabled = true;
    }
 
    fetch('http://localhost:3000/api/users')
@@ -55,9 +55,8 @@ function login(){
          });
          if(exists){
             console.log('logged in');
-            window.location = 'http://localhost:3000/login';
-         }
-            else console.error('invalid data')
+            window.location = 'http://localhost:3000/home'
+         } else console.error('invalid data')
          
       })
       .catch(err=>console.error(err));
@@ -107,9 +106,10 @@ function register(){
             })
          })
          .then((res)=>{
+            console.log('smth')
             console.log(res)
             alert(`${username.value} registered!`);
-            window.location = 'http://localhost:3000/login';
+            redirectToLogin()
          }).catch(err=>console.log(err))
       
    }
