@@ -28,10 +28,10 @@ fetch('http://localhost:3000/api/cats/')
          name.innerHTML = `Name: ${item.name}`;
          age.innerHTML = `Age: ${item.age}`;
          action.innerHTML = `When bored: ${item.bored_action}`
-         
-         container.appendChild(newCat)
-         newCat.appendChild(content); newCat.appendChild(image);
+
          content.appendChild(name); content.appendChild(age); content.appendChild(action);
+         newCat.appendChild(image); newCat.appendChild(content);
+         container.appendChild(newCat)
       });
    })
    .catch(err=>console.log(err))
