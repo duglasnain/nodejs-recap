@@ -1,8 +1,15 @@
-
+:root{
+    --c1: rgb(142, 195, 176);
+    --c2: rgb(158, 213, 197);
+    --c3: rgb(188, 234, 213);
+    --c4: rgb(222, 245, 229);
+    --c2op08: rgb(158, 213, 197, 0.6);
+}
 body, html {
-    background-color: rgb(0, 150, 255);
+    background-color: var(--c2);
     height: 100%;
     margin: 0;
+    overflow-x: hidden;
 }
 
 * {
@@ -18,25 +25,27 @@ body, html {
     background-size: cover;
     background-position: center;
     height: 50%;
+    transform: translateY(-1%) translateX(-1%);
+    width: 102%;
+    
 }
 
 #footer{
     background-size: cover;
     background-position: center;
     height: 50%;
-    background-color: rgb(0, 215, 255);
+    background-color: var(--c1);
 }
 
 #header-content{
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
-    color: white;
+    background-color: var(--c2op08); /* Black w/opacity/see-through */
+    color: rgb(43, 39, 39);;
     font-weight: bold;
-    border: 3px solid #f1f1f1;
-    position: absolute;
+    border-radius: 5px;
+    border: 3px solid rgb(43, 39, 39);;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -130%);
+    transform: translate(10%, -140%);
     z-index: 2;
     width: 80%;
     padding: 20px;
@@ -50,7 +59,7 @@ body, html {
 
 .item{
     width: 30vw;
-    background-color:rgb(88, 0, 255);
+    background-color:var(--c3);
     height: 60vh;
     border-radius: 10px;
     margin: 2.5vh 1.68vh;
@@ -71,8 +80,8 @@ body, html {
 .content{
     margin-top: 5%;
     padding: 10px 10px 10px 10px;
-    background-color: rgb(0, 56, 58);
-    color: rgb(114, 255, 255);
+    background-color: var(--c1);
+    color: rgb(43, 39, 39);
     height: 25%;
     border-radius: 0px 0px 10px 10px;
 }
@@ -83,7 +92,7 @@ body, html {
     width: 30%;
     border: none;
     margin-bottom: 1vw;
-    background-color: rgb(177, 197, 241);
+    background-color: var(--c4);
     /* padding: 10px; */
     box-sizing: border-box;
     border-radius: 4px;
